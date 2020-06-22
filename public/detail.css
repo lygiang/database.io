@@ -1,0 +1,36 @@
+
+h1{
+    text-align: center;
+    color: red;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 70px;
+}
+
+.content_body{
+    margin-left: 400px;
+    align-items: center;
+}
+
+h3{
+    color: red;
+}
+
+h4{
+    color: red; 
+}
+
+.title{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 650px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+

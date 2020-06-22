@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit page Du lịch Việt Nam</title>
+    <link rel="stylesheet" href="./dulichVN.css">
+    <script src="https://kit.fontawesome.com/4433593c29.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Edit content page Du lịch Việt Nam</h1>
+
+    <form action="/new-todo" method="POST">
+        <span>Image link:</span><input type="text" name="img">
+        <span>Tour Name:</span><input type="text" name="title">
+        <span>Price:</span><input type="number" name="price">
+        <span>Link transit:</span><input type="text" name="link">
+        <button type=" submit "><b>ADD TOUR</b></button>
+    </form>
+
+    <form action="/fix-todo" method="POST">
+        <span>Old tour Name:</span><input type="text" name="title">
+        <span>New tour Name:</span><input type="text" name="newtitle">
+        <button type="submit"><b>UPDATE TOUR</b></button>
+    </form>
+    
+    <form action="/delete-todo" method="POST">
+        <span>Tour Name:</span><input type="text" name="title">
+        <button type="submit"><b>DELETE TOUR</b></button>
+    </form>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="header">
+                <span class="style_header">Du lịch Việt Nam</span>
+            </div>
+        </div>
+            <div class="tourist">
+                <% for(let i = 0; i < result.length; i++){ %>
+                <div class="tour">
+                    <div class="sapa_info">
+                        <div class="img">
+                            <img src="<%= result[i].img %>" alt="image">
+                        </div>
+                        <div class="about">
+                            <div class="summary">
+                                <span><%= result[i].title %></span>
+                            </div>
+                            <div class="detail">
+                                <div class="price">
+                                    <span><%= result[i].price %></span>
+                                </div>
+                            </div>
+                            <div class="logo_icon">
+                                <span><i class="fas fa-plane"></i></span>
+                            </div>
+                            <button class="button">
+                                <span>
+                                    <a href="<%= result[i].link %>"><b>Xem thêm</b></a>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+    </div>
+</body>
+
+</html>

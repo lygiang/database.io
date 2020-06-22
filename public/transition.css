@@ -1,0 +1,22 @@
+
+
+.icon_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.icon_image img{
+    display: block;
+    border: 2px solid red;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    transition: all 3s ease-out;
+}
+
+.icon_image img:hover{
+    transform: scale(1.2) rotate(30deg);
+}
