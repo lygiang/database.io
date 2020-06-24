@@ -12,7 +12,7 @@
 <body>
     <h1>Edit content page Du lịch Việt Nam</h1>
 
-    <form action="/new-todo" method="POST">
+    <form action="/add-tour" method="POST">
         <span>Image link:</span><input type="text" name="img">
         <span>Tour Name:</span><input type="text" name="title">
         <span>Price:</span><input type="number" name="price">
@@ -20,13 +20,13 @@
         <button type=" submit "><b>ADD TOUR</b></button>
     </form>
 
-    <form action="/fix-todo" method="POST">
+    <form action="/update-tour" method="POST">
         <span>Old tour Name:</span><input type="text" name="title">
         <span>New tour Name:</span><input type="text" name="newtitle">
         <button type="submit"><b>UPDATE TOUR</b></button>
     </form>
     
-    <form action="/delete-todo" method="POST">
+    <form action="/delete-tour" method="POST">
         <span>Tour Name:</span><input type="text" name="title">
         <button type="submit"><b>DELETE TOUR</b></button>
     </form>
